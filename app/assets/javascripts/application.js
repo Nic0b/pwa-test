@@ -16,6 +16,6 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-//= require serviceworker-companion
 //= require materialize
+//= require serviceworker-companion
 //= require test
