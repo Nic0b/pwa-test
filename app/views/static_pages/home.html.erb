@@ -1,18 +1,16 @@
 <div class="navbar-fixed">
-<nav>
-
-	<div class="nav-wrapper">
-		<a href="#!" class="brand-logo">Logo</a>
-		<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-		<ul class="right hide-on-med-and-down">
-			<li><a href="sass.html">Sass</a></li>
-			<li><a href="badges.html">Components</a></li>
-			<li><a href="collapsible.html">Javascript</a></li>
-			<li><a href="mobile.html">Mobile</a></li>
-		</ul>
-	</div>
-
-</nav>
+	<nav>
+		<div class="nav-wrapper">
+			<a href="#!" class="brand-logo">Logo</a>
+			<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="sass.html">Sass</a></li>
+				<li><a href="badges.html">Components</a></li>
+				<li><a href="collapsible.html">Javascript</a></li>
+				<li><a href="mobile.html">Mobile</a></li>
+			</ul>
+		</div>
+	</nav>
 </div>
 <ul id="slide-out" class="sidenav">
 	<li><div class="user-view">
@@ -29,61 +27,98 @@
 	<li><div class="divider"></div></li>
 	<li><a class="waves-effect" href="#!"><i class="material-icons">info_outline</i>ABOUT</a></li>
 </ul>
+<div class="container">
+	<ul class="collection">
+		<li class="collection-item avatar">
+			<i class="material-icons circle indigo lighten-1">insert_chart</i>
+			<span class="title">PM25</span>
+			<p>10.50 <br>
+				U/gm
+			</p>
+			<div class="secondary-content"><i class="material-icons">mood</i></div>
+		</li>
+		<li class="collection-item avatar">
+			<i class="material-icons circle teal">insert_chart</i>
+			<span class="title">PM10</span>
+			<p>20.60 <br>
+				Second Line
+			</p>
+			<a href="#!" class="secondary-content"><i class="material-icons">mood_bad</i></a>
+		</li>
+	</ul>
+</div>
+<div class="container">
+	<ul class="collapsible popout">
+		<li>
+			<div class="collapsible-header"><i class="material-icons">info</i>Info supplémentaire</div>
+			<div class="collapsible-body"><span>
+				      <table class="striped centered">
+        <thead>
+          <tr>
+              <th>Pm25</th>
+              <th>value</th>
+              <th>value review</th>
+          </tr>
+        </thead>
 
-<div class="container services">
-	<div class="row">
-		<div class="col s6 m6 l3 center-align">
-			<div class="card">
-				<div class="card-content">
-					<i class="material-icons medium">aspect_ratio</i>
-					<h6>PM25</h6>
-				</div>
-				<div class="card-action">
-					<p> 10,8 u/mg</p>
-				</div>
+        <tbody>
+          <tr>
+            <td>Alvin</td>
+            <td>Eclair</td>
+            <td>$0.87</td>
+          </tr>
+          <tr>
+            <td>Alan</td>
+            <td>Jellybean</td>
+            <td>$3.76</td>
+          </tr>
+          <tr>
+            <td>Jonathan</td>
+            <td>Lollipop</td>
+            <td>$7.00</td>
+          </tr>
+        </tbody>
+      </table>
+			</span></div>
+		</li>
+		<li>
+			<div class="collapsible-header"><i class="material-icons">place</i>Ma Position</div>
+			<div class="collapsible-body"><span>  <% h = {1 => 2, 2 => 3, 3=> 4} %>
+			<%= line_chart h.count %></span></div>
+		</li>
+		<li>
+			<div class="collapsible-header"><i class="material-icons">whatshot</i>Info Capteur</div>
+			<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+		</li>
+	</ul>
+</div>
+<div class="divider"></div>
+<div class="section">
+	<div class="container">
+		<h5 class="center-align">Feeling</h5>
+		<div class="row">
+			<div class="col s4">
+				<a class="btn-floating btn-large waves-effect waves-light indigo lighten-1"><i class="material-icons">thumb_down</i></a>
 			</div>
-		</div>
-		<div class="col s6 m6 l3 center-align">
-			<div class="card">
-				<div class="card-content">
-					<i class="material-icons medium">map</i>
-					<h6>PM10</h6>
-				</div>
-				<div class="card-action">
-					<p id="pid"> 20,2 u/mg</p>
-				</div>
+			<div class="col s4">
+				<a class="btn-floating btn-large waves-effect waves-light indigo lighten-1"><i class="material-icons">thumbs_up_down</i></a>
+			</div>
+			<div class="col s4">
+				<a class="btn-floating btn-large waves-effect waves-light indigo lighten-1"><i class="material-icons">thumb_up</i></a>
 			</div>
 		</div>
 	</div>
 </div>
-  <ul class="collapsible popout">
-    <li>
-      <div class="collapsible-header"><i class="material-icons">info</i>Graphique</div>
-      <div class="collapsible-body"><span><div class="row">
-    <div class="col s12 m6">
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-          <span class="card-title">Card Title</span>
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-          <a href="#">This is a link</a>
-          <a href="#">This is a link</a>
-        </div>
-      </div>
-    </div>
-  </div></span></div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-      <div class="collapsible-body"><span>  <% h = {1 => 2, 2 => 3, 3=> 4} %>
-<%= line_chart h.count %></span></div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-  </ul>
-  <%= pie_chart({"Football" => 10, "Basketball" => 5}) %>
+<br>
+<br>
+<%= pie_chart({"Football" => 10, "Basketball" => 5}) %>
 <p><input value="rec" type="button" onclick="changeText();" /></p>
+<div class="container">
+	<% data = {"PM25" => 10, "PM10" => 5} %>
+	<%= column_chart data, min: 0, max: 100, colors: ["#b00", "#666"], dataset: { borderWidth: 0 }%>
+</div>
+<div class="fixed-action-btn">
+	<a class="btn-floating btn-medium red">
+		<i class="medium material-icons">refresh</i>
+	</a>
+</div>

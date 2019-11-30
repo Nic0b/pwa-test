@@ -2,7 +2,7 @@ $(document).ready(function(){
 	$('.sidenav').sidenav();
     $('.tabs').tabs();
     $('.collapsible').collapsible();
-    fetchTopFive('javascript');
+    $('.carousel').carousel();
     changeText();
 });
 
@@ -31,12 +31,3 @@ function changeText() {
 
 
 
-document.addEventListener('click', event => {
-fetch('https://ai-for-good-api.herokuapp.com/api/v1/data')
-.then(response => response.json())
-.then(data => {
-  console.log(data) // Prints result from `response.json()` in getRequest
-})
-.catch(error => console.error(error))
-
-});
