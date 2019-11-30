@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem "chartkick"
 gem 'jquery-rails'
 gem 'material_icons'
 gem 'materialize-sass', '~> 1.0.0'
