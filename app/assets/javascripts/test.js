@@ -2,9 +2,7 @@ $(document).ready(function(){
 	$('.sidenav').sidenav();
     $('.tabs').tabs();
     $('.collapsible').collapsible();
-    $('.carousel').carousel();
-    changeText();
-});
+   });
 
 
   async function fetchTopFive(sub) {
@@ -20,12 +18,12 @@ $(document).ready(function(){
     throw Error(e);
   }
 }
-function changeText() {
-  var p = document.getElementById("pid");
+// function changeText() {
+//   var p = document.getElementById("pid");
 
-  p.style.color = "blue"
-  p.style.fontSize = "18pt"
-}
+//   p.style.color = "blue"
+//   p.style.fontSize = "18pt"
+// }
 
 
 
