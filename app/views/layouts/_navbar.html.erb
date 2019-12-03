@@ -13,6 +13,7 @@
 	</nav>
 </div>
 <ul id="slide-out" class="sidenav">
+	<li><a class="sidenav-close" href="#!">Clicking this will close Sidenav</a></li>
 	<li><div class="user-view">
 		<div class="background">
 			<%= image_tag "office.jpg" %>
@@ -33,3 +34,8 @@
 
 
 </ul>
+<script type="text/javascript">
+    $(function() {
+      $('.sidenav').sidenav();
+    })
+  </script>

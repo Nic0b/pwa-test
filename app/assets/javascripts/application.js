@@ -16,10 +16,9 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-//= require test
-//= require materialize-sprockets
+//= require materialize
 //= require serviceworker-companion
-
+//= require test
 //= require chartkick
 //= require Chart.bundle
 

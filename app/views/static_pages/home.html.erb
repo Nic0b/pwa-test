@@ -94,18 +94,3 @@
 <br>
 <br>
 
-<p><input value="rec" type="button" onclick="changeText();" /></p>
-<div class="container">
-	<% data = {"PM25" => 10, "PM10" => 5} %>
-	<%= column_chart data, min: 0, max: 100, colors: ["#b00", "#666"], dataset: { borderWidth: 0 }%>
-</div>
-<div class="fixed-action-btn">
-	<a href="/" class="btn-floating btn-medium red">
-		<i class="medium material-icons">refresh</i>
-</a>
-
-</div>
-
-		<%= link_to root_path, :class => 'btn-floating btn-medium red' do %>
-  <i class="medium material-icons">refresh</i> 
-<% end %>
