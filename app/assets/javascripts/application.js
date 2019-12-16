@@ -25,7 +25,7 @@
 		function sendPush() {
 		getKeys(false)
 	}
-	var vapidPublicKey = new Uint8Array("#{Base64.urlsafe_decode64($vapid_public).bytes}");
+	var vapidPublicKey = new Uint8Array("<%=Base64.urlsafe_decode64($vapid_public).bytes%>");
 	// var vapidPublicKey = ("#{$vapid_public}");
 
    function checkNotifs(obj){
