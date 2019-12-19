@@ -18,12 +18,13 @@ def sendPush
 		                        auth_key: params[:subscription][:keys][:auth])
 		User.where(auth_key: params[:subscription][:keys][:auth]).destroy_all
 		user = User.create(auth_key: params[:subscription][:keys][:auth], :notif_id => notif_data.id)
-		sendPayload(user)
+		m = params[:message]
+		sendPayload(user, m)
 		render body: nil
 	end
 
-	def sendPayload(user)
-	    @message = get_message(user.name)
+	def sendPayload(user, m)
+	    @message = m
 	    if user.notif_id.present?
 	      @notification_data = NotificationDatum.find(user.notif_id)
 	      Webpush.payload_send(endpoint: @notification_data.endpoint,

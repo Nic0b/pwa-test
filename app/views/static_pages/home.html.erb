@@ -46,10 +46,20 @@
      }
 
    function sendNo(subscription){
+//    	var url_string = window.location.href;
+// var url = new URL(url_string);
+var c = document.getElementById("test").value
+console.log(c.length);
+ if (c.length != 0 ) {
+    console.log(c);
 	$.post('/sendNo', {
     	subscription: subscription,
-        message: 'You clicked a button!'
+        message: c
      });
+  } else {
+    console.log('notgood');
+  }
+
   }
 
 </script>
@@ -57,6 +67,8 @@
 			<button type="button" class="btn btn-default" onclick="sendPush()">
 				Send WebPush
 			</button>
+  Message à envoyer: <input type="text" name="fname" id="test"><br>
+
 <div class="section">
 	<div class="container">
 		<ul class="collection">
@@ -81,6 +93,8 @@
 		</ul>
 	</div>
 </div>
+
+<%= text_field_tag 'name'%>
 <div class="divider"></div>
 <div class="section">
 	<div class="container">
