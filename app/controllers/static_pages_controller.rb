@@ -23,7 +23,7 @@ def sendPush
 	end
 
 	def sendPayload(user)
-	    @message = {
+	    message = {
   title: "title",
   body: "body",
   icon: "https://webpratik.fr/wp-content/uploads/2019/01/logo_herde01-1-1004x1024.png"
@@ -31,7 +31,7 @@ def sendPush
 	    if user.notif_id.present?
 	      @notification_data = NotificationDatum.find(user.notif_id)
 	      Webpush.payload_send(endpoint: @notification_data.endpoint,
-	                           message: JSON.generate(@message),
+	                           message: message.to_json,
 	                           p256dh: @notification_data.p256dh_key,
 	                           auth: @notification_data.auth_key,
 	                           ttl: 24 * 60 * 60,
