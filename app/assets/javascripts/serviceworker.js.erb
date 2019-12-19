@@ -64,11 +64,10 @@ self.addEventListener('activate', onActivate);
 self.addEventListener('fetch', onFetch);
 self.addEventListener("push", function(event) {
   var json = event.data.json();
-      const title2 = 'Image Notification';
-    const vr = {
-      image: "<%= asset_path 'icon-76x76.png' %>"
-    };
-  self.registration.showNotification(title2, vr);
+  self.registration.showNotification(json.title, {
+    body: json.body,
+    icon: json.icon
+  });
 });
 
 self.addEventListener('notificationclick', function(event) {
