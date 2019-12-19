@@ -44,6 +44,10 @@ def sendPush
     end
 
     def get_message(name)
-    	"Hello World"
+    	{
+  title: "title",
+  body: "body",
+  icon: "#{asset_path 'icon-180x180.png'}"
+}
     end
 end
