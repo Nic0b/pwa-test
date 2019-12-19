@@ -24,12 +24,10 @@ def sendPush
 
 	def sendPayload(user)
 	    @message = get_message(user.name)
-	    @icon = asset_path 'icon-180x180.png'
 	    if user.notif_id.present?
 	      @notification_data = NotificationDatum.find(user.notif_id)
 	      Webpush.payload_send(endpoint: @notification_data.endpoint,
 	                           message: @message,
-	                           icon: @icon,
 	                           p256dh: @notification_data.p256dh_key,
 	                           auth: @notification_data.auth_key,
 	                           ttl: 24 * 60 * 60,
@@ -46,8 +44,6 @@ def sendPush
     end
 
     def get_message(name)
-
-'hi'
-
+    	"Hello World"
     end
 end
