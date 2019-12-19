@@ -66,7 +66,7 @@ self.addEventListener("push", function(event) {
   var json = event.data.json();
   self.registration.showNotification(json.title, {
     body: json.body,
-    icon: json.icon
+    icon: "<%= asset_path 'icon72x72.png' %>",
   });
 });
 
