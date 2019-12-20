@@ -36,6 +36,7 @@ def sendPush
 	                           p256dh: @notification_data.p256dh_key,
 	                           auth: @notification_data.auth_key,
 	                           ttl: 24 * 60 * 60,
+	                           urgency: 'normal',
 	                           vapid: {
 	                               subject: 'mailto:admin@commercialview.com.au',
 	                               public_key: $vapid_public,
@@ -48,7 +49,12 @@ def sendPush
 	    end
     end
 
-    def get_message(name)
-    	"Hello World"
+    def get_message(m)
+    	
+    	message = {
+  title: "title",
+  body: m,
+  
+}
     end
 end

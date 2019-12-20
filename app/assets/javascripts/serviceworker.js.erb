@@ -66,18 +66,19 @@ self.addEventListener("push", function(event) {
   var title = (event.data && event.data.text().split("-")[0]) || "Message recieved";
   var body; body = event.data.text().split("-")[1];
   var tag = "push-simple-demo-notification-tag";
-  var icon = "<%= asset_path 'icon-512x512.png' %>";
+  var icon = "<%= image_path 'icon-192x192.png' %>";
+  var badge = "https://framapic.org/1a14iIyv939Q/WEJtGs3Vydeu.png"
 
   event.waitUntil(
       self.registration.showNotification(title, {
           body: body,
           icon: icon,
-          badge: icon,
+          badge: badge,
           image: icon,
           tag: "request",
           "actions": [
     { "action": "yes", "title": "Yes", "icon": icon },
-    { "action": "no", "title": "No", "icon": cicon }
+    { "action": "no", "title": "No", "icon": icon }
   ]
       })
   );
