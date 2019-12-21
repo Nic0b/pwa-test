@@ -13,7 +13,8 @@ class StaticPagesController < ApplicationController
   	@device = CallApi.new.get_device
 
   end
-
+  def test 
+  end
 
 def sendPush
 	user = current_user

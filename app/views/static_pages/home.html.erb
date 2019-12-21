@@ -158,7 +158,18 @@ console.log(c.length);
 				</div>
 			</div>
 </div>
-
+<div>
+	<%= line_chart h, colors: ["#b00", "#666"] %> %>
+	<% h = {'day1' => 2.5, "day2" => 3, 3=> 4}
+	   n = {4 => 8, 9 => 10, 4=> 5} %>
+	 <% data = ({"pm25" => @device['pm25'], "pm10" => @device['pm10']}) %>
+	 	<%= pie_chart({"pm25" => 10, "Basketball" => 5}) %>
+	 	<%= column_chart data , colors: ["#b00", "#666"], prefix: "$",  download: {background: "#ffffff"}%>
+	 	<%= line_chart [
+  {name: "Series A", data: h},
+  {name: "Series B", data: n}
+] %>
+	 </div></div>
 
 
 <br>

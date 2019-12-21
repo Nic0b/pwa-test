@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root to: 'static_pages#home'
   get 'static_pages/index'
   get 'static_pages/user'
+  get 'static_pages/test'
   post "/sendkeys" => "static_pages#getJSON", :as => :getJSON
   post "/sendNo" => "static_pages#sendPush", :as => :sendPush
 
